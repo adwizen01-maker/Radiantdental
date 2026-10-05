@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title id="page-title">Treatment Details | Radiant Dental Care Udaipur</title>
+  
+  <meta name="description" id="page-desc" content="Comprehensive details on modern painless dental treatments at Radiant Dental Care in Udaipur. By Dr. Kalpit Kumar.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" id="page-canonical" href="https://radiantdentalcare.com/treatment.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" id="og-title" content="Dental Treatments | Radiant Dental Care Udaipur">
+  <meta property="og:description" id="og-desc" content="Specialized painless dental treatments, dental implants, clear aligners, and cosmetic dentistry in Udaipur.">
+  <meta property="og:image" content="assets/images/equipment.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#0A2540">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <style>
+    .treatment-nav-bar {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid var(--color-border);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: var(--header-height);
+      z-index: 900;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+    .treatment-nav-scroll {
+      display: flex;
+      gap: 0.6rem;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .treatment-nav-pill {
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: var(--color-bg-subtle);
+      color: var(--color-text-body);
+      border: 1px solid var(--color-border);
+      transition: all var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .treatment-nav-pill:hover, .treatment-nav-pill.active {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      border-color: var(--color-primary);
+    }
+    .treatment-hero-wrap {
+      padding: 4rem 0 3.5rem 0;
+      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+    .treatment-hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .treatment-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1rem;
+    }
+    .treatment-breadcrumb a {
+      color: var(--color-cta);
+    }
+    .treatment-meta-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin: 1.75rem 0;
+      padding: 1.25rem;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+    .treatment-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .treatment-meta-icon {
+      color: var(--color-accent);
+      font-size: 1.25rem;
+    }
+    .treatment-meta-title {
+      font-size: 0.725rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+    }
+    .treatment-meta-val {
+      font-weight: 700;
+      color: var(--color-primary);
+      font-size: 0.925rem;
+    }
+    .treatment-hero-img-box {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      border: 4px solid #FFFFFF;
+      height: 380px;
+      background-color: #E2E8F0;
+    }
+    .treatment-hero-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .detail-grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+    .detail-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .detail-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .detail-card-title i {
+      color: var(--color-accent);
+    }
+    .detail-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .detail-check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--color-text-body);
+      line-height: 1.5;
+    }
+    .detail-check-item i {
+      color: var(--color-success);
+      font-size: 1rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    @media (max-width: 900px) {
+      .treatment-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .treatment-hero-img-box {
+        height: 280px;
+      }
+      .detail-grid-two {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 480px) {
+      .treatment-hero-wrap {
+        padding: 2.5rem 0 2rem 0;
+      }
+      .treatment-hero-img-box {
+        height: 220px;
+      }
+      .treatment-meta-box {
+        flex-direction: column;
+        gap: 0.85rem;
+        padding: 1rem;
+      }
+      .detail-card {
+        padding: 1.5rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#treatment-content" class="skip-link">Skip to treatment details</a>
+
+  <!-- Top Information Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="status-badge"><span class="pulse-dot"></span> Accepting New Patients</span>
+        <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Mon - Sat: 9:30 AM - 8:30 PM</span>
+      </div>
+      <div class="top-bar-right">
+        <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Sector 14, Hiran Magri, Udaipur</span>
+        <a href="tel:+917568754898" class="top-link" data-action="call">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i> 075687 54898
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Radiant Dental Care Homepage">
+        <div class="brand-icon">
+          <i class="fa-solid fa-tooth" aria-hidden="true"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Radiant</span>
+          <span class="brand-sub">Dental Care</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#about-doctor" class="nav-link">Dr. Kalpit Kumar</a>
+        <a href="treatment.html" class="nav-link active">Treatments</a>
+        <a href="index.html#clinic-experience" class="nav-link">Clinic</a>
+        <a href="index.html#results" class="nav-link">Results</a>
+        <a href="index.html#reviews" class="nav-link">Reviews</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+917568754898" class="btn btn-secondary header-btn" data-action="call">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i> 075687 54898
+        </a>
+        <a href="#appointment" class="btn btn-primary header-btn">
+          <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> Book Appointment
+        </a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="index.html#about-doctor" class="mobile-nav-link">Dr. Kalpit Kumar <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="treatment.html" class="mobile-nav-link">All Treatments <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="index.html#results" class="mobile-nav-link">Treatment Results <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="index.html#reviews" class="mobile-nav-link">Reviews <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="index.html#contact" class="mobile-nav-link">Contact & Directions <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="#appointment" class="btn btn-primary" style="width: 100%;">
+          <i class="fa-regular fa-calendar-check"></i> Book Appointment
+        </a>
+        <a href="https://wa.me/917568754898" class="btn btn-whatsapp" data-action="whatsapp" style="width: 100%;">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+        </a>
+        <a href="tel:+917568754898" class="btn btn-phone" data-action="call" style="width: 100%;">
+          <i class="fa-solid fa-phone"></i> Call 075687 54898
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Treatment Quick Selector Tabs -->
+  <div class="treatment-nav-bar">
+    <div class="container">
+      <div class="treatment-nav-scroll" id="treatment-pills-list">
+        <!-- Rendered dynamically from config -->
+      </div>
+    </div>
+  </div>
+
+  <main id="treatment-content">
+    
+    <!-- ==================== TREATMENT HERO ==================== -->
+    <section class="treatment-hero-wrap">
+      <div class="container treatment-hero-grid">
+        
+        <div>
+          <div class="treatment-breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
+            <a href="treatment.html">Treatments</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
+            <span id="breadcrumb-current">Dental Implants</span>
+          </div>
+
+          <span class="section-tag" id="treatment-category">Restorative Dentistry</span>
+
+          <h1 class="hero-title" id="treatment-heading" style="margin-bottom: 1rem;">
+            Dental Implants
+          </h1>
+
+          <p class="hero-subtitle" id="treatment-overview" style="margin-bottom: 1.5rem;">
+            Permanent, titanium-supported tooth replacements that look, feel, and function just like your natural teeth.
+          </p>
+
+          <!-- Treatment Metadata Pill -->
+          <div class="treatment-meta-box">
+            <div class="treatment-meta-item">
+              <i class="fa-solid fa-stopwatch treatment-meta-icon"></i>
+              <div>
+                <div class="treatment-meta-title">Procedure Time</div>
+                <div class="treatment-meta-val" id="meta-duration">1 - 2 visits</div>
+              </div>
+            </div>
+            <div class="treatment-meta-item">
+              <i class="fa-solid fa-bed-pulse treatment-meta-icon"></i>
+              <div>
+                <div class="treatment-meta-title">Recovery Time</div>
+                <div class="treatment-meta-val" id="meta-recovery">Within 24 hours</div>
+              </div>
+            </div>
+            <div class="treatment-meta-item">
+              <i class="fa-solid fa-shield-halved treatment-meta-icon"></i>
+              <div>
+                <div class="treatment-meta-title">Success Rate</div>
+                <div class="treatment-meta-val">99% Clinical Mastery</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Action CTAs -->
+          <div class="hero-actions">
+            <a href="#appointment" class="btn btn-primary">
+              <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> Book Appointment
+            </a>
+            <a href="tel:+917568754898" class="btn btn-secondary" data-action="call">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> 075687 54898
+            </a>
+            <a href="https://wa.me/917568754898" class="btn btn-whatsapp" data-action="whatsapp">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="treatment-hero-img-box">
+          <img src="assets/images/equipment.jpg" alt="Treatment Procedure" id="treatment-image">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== DETAILED BREAKDOWN & BENEFITS ==================== -->
+    <section class="section">
+      <div class="container">
+        
+        <div style="max-width: 820px; margin-bottom: 3.5rem;">
+          <h2 class="section-title" style="font-size: 2rem;">Comprehensive Treatment Overview</h2>
+          <p id="treatment-full-desc" style="font-size: 1.05rem; line-height: 1.7; color: var(--color-text-body);">
+            Our dental implant procedures offer a lifetime solution for missing teeth. Using precision diagnostic imaging and minimally invasive surgical systems, Dr. Kalpit Kumar ensures maximum stability, natural chewing comfort, and rapid healing with virtually zero downtime.
+          </p>
+        </div>
+
+        <div class="detail-grid-two">
+          
+          <!-- Key Clinical Benefits -->
+          <div class="detail-card">
+            <h3 class="detail-card-title">
+              <i class="fa-solid fa-circle-check"></i> Key Clinical Benefits
+            </h3>
+            <div class="detail-checklist" id="treatment-benefits-list">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Who Is It For -->
+          <div class="detail-card">
+            <h3 class="detail-card-title">
+              <i class="fa-solid fa-user-check"></i> Who Is This Treatment For?
+            </h3>
+            <div class="detail-checklist" id="treatment-ideal-list">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4-STEP PROCEDURE JOURNEY ==================== -->
+    <section class="section section-bg-subtle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Clinical Protocol</span>
+          <h2 class="section-title">The Treatment Journey</h2>
+          <p class="section-subtitle">
+            What you can expect at every step of your procedure at Radiant Dental Care, Udaipur.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Diagnostic Assessment</h3>
+            <p class="step-desc">High-precision digital radiography and examination to model your oral anatomy accurately.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Customized Plan</h3>
+            <p class="step-desc">Dr. Kalpit maps the exact procedure trajectory, ensuring conservative and gentle care.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-num">03</div>
+            <h3 class="step-title">Painless Execution</h3>
+            <p class="step-desc">Smooth, gentle clinical procedure performed under comfortable local anesthesia.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-num">04</div>
+            <h3 class="step-title">Post-Care & Longevity</h3>
+            <p class="step-desc">Personalized aftercare roadmap and periodic checkups to ensure lasting oral health.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DOCTOR CREDIBILITY ==================== -->
+    <section class="section">
+      <div class="container doctor-grid">
+        <div class="doctor-visual">
+          <div class="doctor-portrait-frame">
+            <img src="assets/images/doctor.jpg" alt="Dr. Kalpit Kumar" width="460" height="540">
+          </div>
+          <div class="doctor-experience-tag">
+            <div class="doc-exp-num">12+</div>
+            <div class="doc-exp-label">Years of Mastery</div>
+          </div>
+        </div>
+
+        <div class="doctor-info">
+          <span class="section-tag">Your Treating Specialist</span>
+          <h2 class="doctor-name">Dr. Kalpit Kumar</h2>
+          <div class="doctor-title">BDS, MDS - Dental Surgeon & Oral Healthcare Specialist</div>
+          <p class="doctor-bio">
+            Practicing in Udaipur with a deep commitment to painless dentistry, durable restorations, and patient comfort. Dr. Kalpit personally assesses and performs treatments, ensuring highest clinical standards and transparent care at Om Plaza, Sector 14, Hiran Magri.
+          </p>
+          <div class="doctor-actions">
+            <a href="#appointment" class="btn btn-primary">
+              <i class="fa-regular fa-calendar-check"></i> Book Consultation with Dr. Kalpit
+            </a>
+            <a href="https://wa.me/917568754898" class="btn btn-whatsapp" data-action="whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Chat with Doctor
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TREATMENT FAQ ==================== -->
+    <section class="section section-bg-subtle" id="faq">
+      <div class="container faq-container">
+        <div class="section-header">
+          <span class="section-tag">Common Inquiries</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Have questions about this procedure? Here are straightforward answers.</p>
+        </div>
+
+        <div class="accordion-list">
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Is this treatment painful?</span>
+              <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-body">
+              <p class="accordion-text">
+                No. At Radiant Dental Care, Dr. Kalpit Kumar prioritizes painless dentistry using effective topical numbing gels, gentle local anesthesia, and modern micro-instruments so you stay completely comfortable.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>How many appointments are required?</span>
+              <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-body">
+              <p class="accordion-text">
+                Most routine treatments like whitening or single-sitting root canals require just 1 visit. Complex dental implants and smile restorations typically span 2 visits to ensure perfect biological healing and durability.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>What are the payment options?</span>
+              <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-body">
+              <p class="accordion-text">
+                We maintain 100% transparent pricing with clear estimates before beginning any procedure. We accept UPI (Google Pay, PhonePe, Paytm), cash, debit, and credit cards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== APPOINTMENT BOOKING SECTION ==================== -->
+    <section class="section appointment-section" id="appointment">
+      <div class="container appointment-grid">
+        <div class="appointment-content">
+          <span class="section-tag" style="background: rgba(20, 184, 166, 0.2); color: #34D399;">Direct Scheduling</span>
+          <h2 class="appointment-title">Book Your Treatment Consultation</h2>
+          <p class="appointment-subtitle">
+            Get personalized advice from Dr. Kalpit Kumar and our team in Udaipur. Minimal waiting times guaranteed.
+          </p>
+          <div class="direct-call-pill">
+            <div class="direct-call-icon"><i class="fa-solid fa-phone-volume"></i></div>
+            <div>
+              <div class="direct-call-label">Immediate Appointment Desk</div>
+              <a href="tel:+917568754898" class="direct-call-num" data-action="call">075687 54898</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="appointment-card">
+          <div class="form-header">
+            <h3>Schedule Your Visit</h3>
+            <p>We will confirm your preferred appointment slot promptly.</p>
+          </div>
+          <form id="appointment-form" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="patient-name" class="form-label">Full Name <span class="req">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-user"></i>
+                  <input type="text" id="patient-name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+                </div>
+                <div class="form-error-msg" id="name-error">Please enter your name.</div>
+              </div>
+              <div class="form-group">
+                <label for="patient-phone" class="form-label">Phone Number <span class="req">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-phone"></i>
+                  <input type="tel" id="patient-phone" class="form-input" placeholder="e.g. 075687 54898" required>
+                </div>
+                <div class="form-error-msg" id="phone-error">Please enter a valid phone number.</div>
+              </div>
+              <div class="form-group form-group-full">
+                <label for="patient-treatment" class="form-label">Select Treatment <span class="req">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-tooth"></i>
+                  <select id="patient-treatment" class="form-select" required>
+                    <option value="implants">Dental Implants</option>
+                    <option value="root-canal">Root Canal Treatment</option>
+                    <option value="clear-aligners">Clear Aligners & Orthodontics</option>
+                    <option value="teeth-whitening">Teeth Whitening & Cleaning</option>
+                    <option value="smile-design">Smile Design & Veneers</option>
+                    <option value="pediatric-dentistry">Pediatric Dentistry</option>
+                    <option value="other">General Consultation</option>
+                  </select>
+                </div>
+                <div class="form-error-msg" id="treatment-error">Please select a treatment.</div>
+              </div>
+              <div class="form-group">
+                <label for="preferred-date" class="form-label">Preferred Date</label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-calendar"></i>
+                  <input type="date" id="preferred-date" class="form-input">
+                </div>
+                <div class="form-error-msg" id="date-error">Please choose a future date.</div>
+              </div>
+              <div class="form-group">
+                <label for="preferred-time" class="form-label">Preferred Time Slot</label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-clock"></i>
+                  <select id="preferred-time" class="form-select">
+                    <option value="Morning (09:30 AM - 01:00 PM)">Morning (09:30 AM - 01:00 PM)</option>
+                    <option value="Afternoon (02:00 PM - 05:00 PM)">Afternoon (02:00 PM - 05:00 PM)</option>
+                    <option value="Evening (05:00 PM - 08:30 PM)">Evening (05:00 PM - 08:30 PM)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group form-group-full">
+                <label for="patient-message" class="form-label">Questions or Dental History (Optional)</label>
+                <textarea id="patient-message" class="form-textarea" placeholder="Briefly describe what you'd like Dr. Kalpit to look at..."></textarea>
+              </div>
+              <div class="form-group form-group-full">
+                <button type="submit" class="btn btn-primary submit-btn">
+                  <i class="fa-regular fa-paper-plane"></i> Request Appointment
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="form-success-state" id="appointment-success">
+            <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+            <h4 class="success-title">Appointment Request Received!</h4>
+            <p class="success-text">
+              Thank you! Your appointment request has been received. Dr. Kalpit Kumar's clinic will contact you promptly to confirm your slot.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; width: 100%; max-width: 320px;">
+              <a href="https://wa.me/917568754898" id="success-wa-link" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i> Fast-Track on WhatsApp
+              </a>
+              <button type="button" id="book-another-btn" class="btn btn-secondary">Submit Another Request</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon"><i class="fa-solid fa-tooth"></i></div>
+            <div class="brand-text">
+              <span class="brand-name" style="color: #FFFFFF;">Radiant</span>
+              <span class="brand-sub" style="color: var(--color-accent-light);">Dental Care</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            Modern multispecialty dental practice delivering painless, conservative, and trusted dental care in Hiran Magri, Udaipur. Led by Dr. Kalpit Kumar.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">All Treatments</h4>
+          <ul class="footer-links">
+            <li><a href="treatment.html?id=implants" class="footer-link">Dental Implants</a></li>
+            <li><a href="treatment.html?id=root-canal" class="footer-link">Root Canal Treatment</a></li>
+            <li><a href="treatment.html?id=clear-aligners" class="footer-link">Clear Aligners</a></li>
+            <li><a href="treatment.html?id=teeth-whitening" class="footer-link">Teeth Whitening</a></li>
+            <li><a href="treatment.html?id=smile-design" class="footer-link">Smile Design</a></li>
+            <li><a href="treatment.html?id=pediatric-dentistry" class="footer-link">Pediatric Care</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Clinic Hours</h4>
+          <div class="footer-hours-list">
+            <div class="footer-hour-item">
+              <span class="hour-days">Monday – Saturday</span>
+              <span class="hour-time">09:30 AM – 08:30 PM</span>
+            </div>
+            <div class="footer-hour-item">
+              <span class="hour-days">Sunday</span>
+              <span class="hour-time">10:00 AM – 02:00 PM (Prior Appointment)</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact & Location</h4>
+          <p style="color: #CBD5E1; line-height: 1.6; margin-bottom: 1rem;">
+            Om Plaza, Opposite to Natraj Junior School, Sector 14, Hiran Magri, Udaipur 313001
+          </p>
+          <a href="tel:+917568754898" class="btn btn-phone" style="width: 100%; margin-bottom: 0.5rem;" data-action="call">
+            <i class="fa-solid fa-phone"></i> 075687 54898
+          </a>
+          <a href="https://wa.me/917568754898" class="btn btn-whatsapp" style="width: 100%;" data-action="whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <div>&copy; 2026 Radiant Dental Care. All Rights Reserved.</div>
+          <div class="footer-legal-links">
+            <a href="index.html#contact" class="footer-legal-link">Get Directions</a>
+            <a href="index.html" class="footer-legal-link">Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/917568754898" class="floating-whatsapp" data-action="whatsapp" aria-label="Chat with Dr. Kalpit Kumar on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-whatsapp-tooltip">Chat with Doctor</span>
+  </a>
+
+  <!-- Persistent Mobile Bottom CTA Bar -->
+  <div class="mobile-sticky-bar" aria-label="Quick Actions">
+    <div class="mobile-sticky-inner">
+      <a href="tel:+917568754898" class="btn btn-phone mobile-bar-btn" data-action="call">
+        <i class="fa-solid fa-phone"></i> <span>Call Now</span>
+      </a>
+      <a href="#appointment" class="btn btn-inquiry mobile-bar-btn" data-action="inquiry">
+        <i class="fa-regular fa-calendar-check"></i> <span>Book Inquiry</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Dedicated Treatment Page Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof CLINIC_CONFIG === 'undefined' || !CLINIC_CONFIG.treatments) return;
+
+      const urlParams = new URLSearchParams(window.location.search);
+      let treatmentId = urlParams.get('id') || 'implants';
+      let currentTreatment = CLINIC_CONFIG.treatments.find(t => t.id === treatmentId) || CLINIC_CONFIG.treatments[0];
+
+      // Render Pills
+      const pillsContainer = document.getElementById('treatment-pills-list');
+      if (pillsContainer) {
+        pillsContainer.innerHTML = CLINIC_CONFIG.treatments.map(t => `
+          <a href="treatment.html?id=${t.id}" class="treatment-nav-pill ${t.id === currentTreatment.id ? 'active' : ''}">
+            <i class="fa-solid ${t.icon}"></i> ${t.title}
+          </a>
+        `).join('');
+      }
+
+      // Populate details
+      document.title = `${currentTreatment.title} in Udaipur | Radiant Dental Care`;
+      document.getElementById('breadcrumb-current').textContent = currentTreatment.title;
+      document.getElementById('treatment-category').textContent = currentTreatment.category;
+      document.getElementById('treatment-heading').textContent = currentTreatment.title;
+      document.getElementById('treatment-overview').textContent = currentTreatment.shortDesc;
+      document.getElementById('treatment-full-desc').textContent = currentTreatment.fullDesc;
+      document.getElementById('treatment-image').src = currentTreatment.image;
+      document.getElementById('treatment-image').alt = currentTreatment.title;
+
+      document.getElementById('meta-duration').textContent = currentTreatment.duration;
+      document.getElementById('meta-recovery').textContent = currentTreatment.recovery;
+
+      // Populate select in form
+      const selectEl = document.getElementById('patient-treatment');
+      if (selectEl) {
+        selectEl.value = currentTreatment.id;
+      }
+
+      // Benefits list
+      const benefitsContainer = document.getElementById('treatment-benefits-list');
+      if (benefitsContainer && currentTreatment.benefits) {
+        benefitsContainer.innerHTML = currentTreatment.benefits.map(b => `
+          <div class="detail-check-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>${b}</span>
+          </div>
+        `).join('');
+      }
+
+      // Ideal candidates list
+      const idealContainer = document.getElementById('treatment-ideal-list');
+      if (idealContainer && currentTreatment.idealFor) {
+        idealContainer.innerHTML = currentTreatment.idealFor.map(item => `
+          <div class="detail-check-item">
+            <i class="fa-solid fa-user-check" style="color: var(--color-cta);"></i>
+            <span>${item}</span>
+          </div>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>
